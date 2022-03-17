@@ -1,5 +1,5 @@
 using AutoParts.Core.Constants;
-using AutoParts.Data;
+using AutoParts.Infrastructure.Data;
 using AutoParts.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
