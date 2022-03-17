@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AutoParts.Infrastructure.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class AutoPartsDbContext : IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AutoPartsDbContext(DbContextOptions<AutoPartsDbContext> options)
             : base(options)
         {
         }
