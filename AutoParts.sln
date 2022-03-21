@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts", "AutoParts\AutoParts.csproj", "{96539816-F8DA-48DA-9452-D7799981CB22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts", "AutoParts\AutoParts.csproj", "{96539816-F8DA-48DA-9452-D7799981CB22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Core", "AutoParts.Core\AutoParts.Core.csproj", "{E334BFC9-0492-4E7C-9FC4-5D5E39C28E17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts.Core", "AutoParts.Core\AutoParts.Core.csproj", "{E334BFC9-0492-4E7C-9FC4-5D5E39C28E17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Infrastructure", "AutoParts.Infrastructure\AutoParts.Infrastructure.csproj", "{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts.Infrastructure", "AutoParts.Infrastructure\AutoParts.Infrastructure.csproj", "{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Api", "AutoParts.Api\AutoParts.Api.csproj", "{55D060DB-93DE-4506-A5ED-BAAA475A4D14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
