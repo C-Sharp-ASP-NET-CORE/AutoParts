@@ -1,5 +1,6 @@
 using AutoParts.Core.Constants;
 using AutoParts.Infrastructure.Data;
+using AutoParts.Infrastructure.Identity;
 using AutoParts.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 
@@ -8,8 +9,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddApplicationDbContexts(builder.Configuration);
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = true;
+})
     .AddEntityFrameworkStores<AutoPartsDbContext>();
+
+builder.Services.AddAuthentication()
+    .AddFacebook(options=>
+    {
+        options.AppId = "376840881114293";
+        options.AppSecret = "d41617384ee69496e3299aae1d4ea4a2";
+    });
+
 builder.Services.AddControllersWithViews()
                 .AddMvcOptions(optionts =>
                 {

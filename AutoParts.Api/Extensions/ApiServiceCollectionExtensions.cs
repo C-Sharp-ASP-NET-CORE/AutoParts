@@ -1,4 +1,6 @@
-﻿using AutoParts.Infrastructure.Data;
+﻿using AutoParts.Core.Contracts;
+using AutoParts.Core.Services;
+using AutoParts.Infrastructure.Data;
 using AutoParts.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
@@ -9,6 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection
         public static IServiceCollection AddApiServices(this IServiceCollection services)
         {
             services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
+            services.AddScoped<IOrderService, OrderService>();
 
             return services;
         }

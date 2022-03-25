@@ -1,5 +1,4 @@
-﻿
-namespace AutoParts.Infrastructure.Data.Models
+﻿namespace AutoParts.Infrastructure.Data.Models
 {
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -15,6 +14,9 @@ namespace AutoParts.Infrastructure.Data.Models
         public string Name { get; set; }
 
         [Required]
+        [StringLength(PartSerialNumberLength)]
+        public string SerialNumber { get; set; }
+        [Required]
         [StringLength(PartManufacturerMaxLength)]
         public string Manufacturer { get; set; }
 
@@ -29,8 +31,9 @@ namespace AutoParts.Infrastructure.Data.Models
         [Range(typeof(decimal), PartPriceMinLength, PartPriceMaxLength)]
         public decimal Price { get; set; }
 
-        [Range(typeof(decimal), PartWeightMinLength, PartWeightMaxLength)]
-        public double Weight { get; set; }
+        [Required]
+        [Column(TypeName = "date")]
+        public DateTime Date { get; set; } = DateTime.Today;
 
         [Required]
         [Url]
@@ -41,6 +44,8 @@ namespace AutoParts.Infrastructure.Data.Models
         [Required]
         [StringLength(PartDescriptionMaxLength)]
         public string Description { get; set; }
+
+        public IList<StoreHouse> StoreHouses { get; set; } = new List<StoreHouse>();
 
         [Required]
         [ForeignKey(nameof(Category))]
