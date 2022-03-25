@@ -13,13 +13,14 @@ builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = true;
 })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AutoPartsDbContext>();
 
 builder.Services.AddAuthentication()
     .AddFacebook(options=>
     {
-        options.AppId = "376840881114293";
-        options.AppSecret = "d41617384ee69496e3299aae1d4ea4a2";
+        options.AppId = builder.Configuration.GetValue<string>("Facebook:AppId");
+        options.AppSecret = builder.Configuration.GetValue<string>("Facebook:AppSecret");
     });
 
 builder.Services.AddControllersWithViews()
