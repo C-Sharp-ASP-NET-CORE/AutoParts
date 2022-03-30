@@ -1,0 +1,36 @@
+﻿@using AutoParts.Core.Models
+@model UserRolesViewModel
+
+@{
+    ViewData["Title"] = "User Roles";
+}
+
+<div class="row">
+    <div class="col-4">
+        <form id="roles" method="post">
+            <input type="hidden" name="Id" value="@Model.UserId" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <h5><b>User: @Html.DisplayFor(m=>m.Name)</b></h5>
+            </div>
+            <div class="form-floating">
+                <div class="form-group">
+                    <label>User Roles</label>
+                    <select asp-for="RoleIds" multiple="" class="form-control">
+                        @foreach (var role in ViewBag.RoleItems)
+                        {
+                        <option value="@role.Value" selected="@(role.Selected ? "selected" : "")">@role.Text</option>
+                        }
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button id="login-submit" type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+    </div>
+</div>
+
