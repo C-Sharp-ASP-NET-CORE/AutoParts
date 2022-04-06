@@ -6,5 +6,12 @@
             <img src="~/img/home-logo.png" alt="Home Logo" class="brand-image img-circle elevation-1" style="opacity: .8">
             <span class="brand-text font-weight-light">Home</span>
         </a>
+        @if (User.IsInRole("Administrator"))
+        {
+            <a href="/admin/user/manageusers" class="brand-link">
+                <img src="~/img/set-roles.png" alt="Roles Logo" class="brand-image img-circle elevation-1" style="opacity: .8">
+                <span class="brand-text font-weight-light">Set Roles</span>
+            </a>
+        }
     </ul>
 </nav>

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts.Core", "AutoParts
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts.Infrastructure", "AutoParts.Infrastructure\AutoParts.Infrastructure.csproj", "{8CF4D457-34C0-4152-A75E-A5FB1FFADEA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Api", "AutoParts.Api\AutoParts.Api.csproj", "{55D060DB-93DE-4506-A5ED-BAAA475A4D14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoParts.Api", "AutoParts.Api\AutoParts.Api.csproj", "{55D060DB-93DE-4506-A5ED-BAAA475A4D14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoParts.Test", "AutoParts.Test\AutoParts.Test.csproj", "{24A5B9E3-C20D-4109-80FC-7BC5082DD08E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55D060DB-93DE-4506-A5ED-BAAA475A4D14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A5B9E3-C20D-4109-80FC-7BC5082DD08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A5B9E3-C20D-4109-80FC-7BC5082DD08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A5B9E3-C20D-4109-80FC-7BC5082DD08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A5B9E3-C20D-4109-80FC-7BC5082DD08E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
