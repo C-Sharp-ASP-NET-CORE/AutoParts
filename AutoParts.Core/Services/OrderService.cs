@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace AutoParts.Core.Services
 {
     public class OrderService : IOrderService
-    {
+    { 
         private readonly IApplicationDbRepository repo;
 
         public OrderService(IApplicationDbRepository _repo)
