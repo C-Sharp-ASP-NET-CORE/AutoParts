@@ -18,6 +18,7 @@ namespace AutoParts.Infrastructure.Data
         public DbSet<Deal> Deals { get; set; }
         public DbSet<DealSubject> DealsSubjects { get; set; }
         public DbSet<StoreHouse> StoreHouses { get; set; }
+        public DbSet<ApplicationFile> Files { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

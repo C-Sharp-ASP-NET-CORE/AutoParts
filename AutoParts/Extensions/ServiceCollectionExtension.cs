@@ -1,4 +1,5 @@
-﻿using AutoParts.Core.Contracts;
+﻿using AutoParts.Core.Constants;
+using AutoParts.Core.Contracts;
 using AutoParts.Core.Services;
 using AutoParts.Infrastructure.Data;
 using AutoParts.Infrastructure.Data.Repositories;
@@ -12,6 +13,7 @@ namespace Microsoft.Extensions.DependencyInjection
         { 
             services.AddScoped<IApplicationDbRepository, ApplicationDbRepository>();
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IFileService, FileService>();
 
             return services;
         }
