@@ -31,6 +31,13 @@ builder.Services.AddControllersWithViews()
                     optionts.ModelBinderProviders.Insert(2, new DoubleModelBinderProvider());
                 });
 
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+    options.CheckConsentNeeded = context => true;
+
+    options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+
 builder.Services.AddStackExchangeRedisCache(options =>
 {
     options.Configuration = builder.Configuration.GetConnectionString("Redis");
@@ -56,6 +63,7 @@ app.UseStatusCodePages();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCookiePolicy();
 
 app.UseRouting();
 
