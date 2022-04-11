@@ -1,4 +1,4 @@
-﻿namespace AutoParts.Core.Models
+﻿namespace AutoParts.Core.Models.User
 {
     public class UserRolesViewModel
     {

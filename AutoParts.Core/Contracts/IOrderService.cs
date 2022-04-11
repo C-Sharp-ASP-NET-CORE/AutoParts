@@ -1,4 +1,4 @@
-﻿using AutoParts.Core.Models;
+﻿using AutoParts.Core.Models.Order;
 
 namespace AutoParts.Core.Contracts
 {

@@ -1,14 +1,8 @@
 ﻿using AutoParts.Core.Contracts;
-using AutoParts.Core.Models;
+using AutoParts.Core.Models.User;
 using AutoParts.Infrastructure.Data.Repositories;
 using AutoParts.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoParts.Core.Services
 {

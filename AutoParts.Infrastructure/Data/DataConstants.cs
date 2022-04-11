@@ -4,6 +4,7 @@
     {
         public const int CategoryNameMaxLength = 20;
 
+        public const int PartNameMinLength = 2;
         public const int PartNameMaxLength = 50;
         public const int PartSerialNumberLength = 50;
         public const int PartManufacturerMaxLength = 50;

@@ -10,7 +10,7 @@
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [StringLength(PartNameMaxLength)]
+        [StringLength(PartNameMaxLength,MinimumLength = PartNameMinLength)]
         public string Name { get; set; }
 
         [Required]

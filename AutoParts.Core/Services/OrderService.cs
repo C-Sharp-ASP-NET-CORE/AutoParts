@@ -1,13 +1,8 @@
 ﻿using AutoParts.Core.Contracts;
-using AutoParts.Core.Models;
+using AutoParts.Core.Models.Order;
 using AutoParts.Infrastructure.Data.Models;
 using AutoParts.Infrastructure.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoParts.Core.Services
 {

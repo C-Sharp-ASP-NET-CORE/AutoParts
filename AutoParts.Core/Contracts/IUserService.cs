@@ -1,10 +1,5 @@
-﻿using AutoParts.Core.Models;
+﻿using AutoParts.Core.Models.User;
 using AutoParts.Infrastructure.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoParts.Core.Contracts
 {

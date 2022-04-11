@@ -1,0 +1,81 @@
+﻿@using AutoParts.Core.Models.Part
+@model AddPartFormModel
+
+@{
+    ViewData["Title"] = "Add Part";
+}
+
+<div class="card card-primary">
+    <div class="card-header">
+        <h3 class="card-title">Add part</h3>
+    </div>
+
+
+    <form method="post">
+        <div class="card-body">
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" placeholder="Left frong light, Winter tires, etc.">
+                <span asp-validation-for="Name" class="small text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SerialNumber"></label>
+                <input asp-for="SerialNumber" class="form-control" placeholder="XT3R5T56NH, etc.">
+            </div>
+            <div class="form-group">
+                <label asp-for="Manufacturer"></label>
+                <input asp-for="Manufacturer" class="form-control" placeholder="Mercedes-Benz EOOD, Audi OOD, etc.">
+            </div>
+            <div class="form-group">
+                <label asp-for="CarBrand"></label>
+                <input asp-for="CarBrand" class="form-control" placeholder="Mercedes, BMW, Audi, etc.">
+            </div>
+            <div class="form-group">
+                <label asp-for="CarModel"></label>
+                <input asp-for="CarModel" class="form-control" placeholder="E270, A7, E90, etc.">
+            </div>
+            <label asp-for="Price"></label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Leva</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Amount">
+                <div class="input-group-append">
+                    <span class="input-group-text">.00</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date"></label>
+                <input asp-for="Date" class="form-control" placeholder="@DateTime.UtcNow.Year">
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageUrl"></label>
+                <input asp-for="ImageUrl" class="form-control" placeholder="Your image URL">
+            </div>
+            <label asp-for="IsUserd"></label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Second hand (used)
+                </label>
+            </div>
+            <div class="form-floating">
+                <label for="floatingTextarea">Decription</label>
+                <textarea class="form-control" placeholder="Describe your product here" id="floatingTextarea"></textarea>
+            </div>
+            <div class="form-group">
+                <lable asp-for="CategoryId"><b>Category</b></lable>
+                <select asp-for="CategoryId" class="form-control">
+                    <option selected>Open this select menu</option>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>

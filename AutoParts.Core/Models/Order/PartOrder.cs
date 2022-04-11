@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutoParts.Core.Models
+namespace AutoParts.Core.Models.Order
 {
     public class PartOrder
     {

@@ -1,4 +1,4 @@
-﻿namespace AutoParts.Core.Models
+﻿namespace AutoParts.Core.Models.Order
 {
     /// <summary>
     /// Order

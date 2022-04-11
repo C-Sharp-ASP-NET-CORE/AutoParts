@@ -1,12 +1,10 @@
 ﻿using AutoParts.Core.Constants;
 using AutoParts.Core.Contracts;
-using AutoParts.Core.Models;
+using AutoParts.Core.Models.User;
 using AutoParts.Infrastructure.Identity;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
 
 namespace AutoParts.Areas.Admin.Controllers
 {
