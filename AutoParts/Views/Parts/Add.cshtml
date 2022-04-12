@@ -21,32 +21,31 @@
             <div class="form-group">
                 <label asp-for="SerialNumber"></label>
                 <input asp-for="SerialNumber" class="form-control" placeholder="XT3R5T56NH, etc.">
+                <span asp-validation-for="SerialNumber" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Manufacturer"></label>
                 <input asp-for="Manufacturer" class="form-control" placeholder="Mercedes-Benz EOOD, Audi OOD, etc.">
+                <span asp-validation-for="Manufacturer" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CarBrand"></label>
                 <input asp-for="CarBrand" class="form-control" placeholder="Mercedes, BMW, Audi, etc.">
+                <span asp-validation-for="CarBrand" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CarModel"></label>
                 <input asp-for="CarModel" class="form-control" placeholder="E270, A7, E90, etc.">
+                <span asp-validation-for="CarModel" class="small text-danger"></span>
             </div>
-            <label asp-for="Price"></label>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Leva</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Amount">
-                <div class="input-group-append">
-                    <span class="input-group-text">.00</span>
-                </div>
+            <div class="form-group">
+                <label asp-for="Price"></label>
+                <input asp-for="Price" class="form-control" placeholder=".lv">
             </div>
             <div class="form-group">
                 <label asp-for="Date"></label>
                 <input asp-for="Date" class="form-control" placeholder="@DateTime.UtcNow.Year">
+                <span asp-validation-for="Date" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ImageUrl"></label>
@@ -58,10 +57,12 @@
                 <label class="form-check-label" for="flexCheckDefault">
                     Second hand (used)
                 </label>
+                 <span asp-validation-for="IsUserd" class="small text-danger"></span>
             </div>
             <div class="form-floating">
                 <label for="floatingTextarea">Decription</label>
                 <textarea class="form-control" placeholder="Describe your product here" id="floatingTextarea"></textarea>
+                 <span asp-validation-for="Description" class="small text-danger"></span>
             </div>
             <div class="form-group">
                 <lable asp-for="CategoryId"><b>Category</b></lable>
@@ -72,6 +73,7 @@
                         <option value="@category.Id">@category.Name</option>
                     }
                 </select>
+                 <span asp-validation-for="CategoryId" class="small text-danger"></span>
             </div>
         </div>
         <div class="card-footer">

@@ -1,4 +1,5 @@
 ﻿using AutoParts.Infrastructure.Data;
+using AutoParts.Infrastructure.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,39 +16,47 @@ namespace AutoParts.Core.Models.Part
         [Required]
         [StringLength(PartNameMaxLength, MinimumLength = PartNameMinLength)]
         public string Name { get; init; }
+
         [DisplayName("Serial Number")]
         [Required]
-        [StringLength(30)]
+        [StringLength(PartSerialNumberMaxLength,MinimumLength =PartSerialNumberMinLength)]
         public string SerialNumber { get; init; }
+
         [Required]
-        [StringLength(30)]
+        [StringLength(PartManufacturerMaxLength,MinimumLength =PartManufacturerMinLength)]
         public string Manufacturer { get; init; }
+
         [DisplayName("Car Brand")]
         [Required]
-        [StringLength(30)]
+        [StringLength(PartCarBrandMaxLength, MinimumLength = PartCarBrandMinLength)]
         public string CarBrand { get; init; }
+
         [DisplayName("Car Model")]
         [Required]
-        [StringLength(30)]
+        [StringLength(PartCarModelMaxLength, MinimumLength = PartCarModelMinLength)]
         public string CarModel { get; init; }
+
         [Required]
-        [Range(typeof(decimal), PartPriceMinLength, PartPriceMaxLength)]
         public string Price { get; init; }
 
         [DisplayName("Year")]
         [Required]
         public string Date { get; set; }
+
         [Required]
         [Url]
         [DisplayName("Image URL")]
         public string ImageUrl { get; init; }
+
         [DisplayName("Is your product used?")]
         public bool IsUserd { get; init; }
+
         [Required]
-        [StringLength(500)]
+        [StringLength(PartDescriptionMaxLength, MinimumLength = PartDescriptionMinLength)]
         public string Description { get; init; }
+
         [DisplayName("Categories")]
-        public int CategoryId { get; init; }
+        public Guid CategoryId { get; init; }
         public IEnumerable<PartCategoryViewModel> Categories { get; set; }
     }
 }

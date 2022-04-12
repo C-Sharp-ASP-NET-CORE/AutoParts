@@ -14,18 +14,19 @@
         public string Name { get; set; }
 
         [Required]
-        [StringLength(PartSerialNumberLength)]
+        [StringLength(PartSerialNumberMaxLength, MinimumLength = PartSerialNumberMinLength)]
         public string SerialNumber { get; set; }
+
         [Required]
-        [StringLength(PartManufacturerMaxLength)]
+        [StringLength(PartManufacturerMaxLength, MinimumLength = PartManufacturerMinLength)]
         public string Manufacturer { get; set; }
 
         [Required]
-        [StringLength(PartCarBrandMaxLength)]
+        [StringLength(PartCarBrandMaxLength,MinimumLength =PartCarBrandMinLength)]
         public string CarBrand { get; set; }
 
         [Required]
-        [StringLength(PartCarModelMaxLength)]
+        [StringLength(PartCarModelMaxLength,MinimumLength = PartCarModelMinLength)]
         public string CarModel { get; set; }
 
         [Range(typeof(decimal), PartPriceMinLength, PartPriceMaxLength)]
@@ -42,7 +43,7 @@
         public bool IsUserd { get; set; }
 
         [Required]
-        [StringLength(PartDescriptionMaxLength)]
+        [StringLength(PartDescriptionMaxLength,MinimumLength =PartDescriptionMinLength)]
         public string Description { get; set; }
 
         public IList<StoreHouse> StoreHouses { get; set; } = new List<StoreHouse>();
